@@ -45,11 +45,11 @@ namespace :deploy do
     end
   end
 
-  after 'deploy:updated', 'deploy:compile_assets'
+  # after 'deploy:updated', 'deploy:compile_assets'
   # NOTE: we don't want to remove assets we've just compiled
   # after 'deploy:updated', 'deploy:cleanup_assets'
-  after 'deploy:updated', 'deploy:normalize_assets'
-  after 'deploy:reverted', 'deploy:rollback_assets'
+  # after 'deploy:updated', 'deploy:normalize_assets'
+  # after 'deploy:reverted', 'deploy:rollback_assets'
 
   namespace :assets do
     task :precompile do
